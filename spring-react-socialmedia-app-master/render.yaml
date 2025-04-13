@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: spring-backend
+    env: java
+    buildCommand: ./gradlew build
+    startCommand: java -jar build/libs/*.jar
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+    plan: free
+    autoDeploy: true
+    rootDir: social-media-app-backend
+services:
+  - type: web
+    name: spring-backend
+    env: java
+    buildCommand: ./gradlew build
+    startCommand: java -jar build/libs/*.jar
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+    plan: free
+    autoDeploy: true
+    rootDir: social-media-app-backend
